@@ -6,11 +6,12 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using System;
+using System.Runtime.CompilerServices;
+using System.Diagnostics;
 
 public class UIController : MonoBehaviour
 {
     public static UIController Instance { get; private set; }
-
     [SerializeField] private TMP_Text waveText;
     [SerializeField] private TMP_Text livesText;
     [SerializeField] private TMP_Text resourcesText;
@@ -38,9 +39,12 @@ public class UIController : MonoBehaviour
 
     [SerializeField] private GameObject pausePanel;
     private bool _isGamePaused = false;
+    [SerializeField] private GameObject settingsPanel;
+    private bool _isSettingsOpen = false;
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private TMP_Text objectiveText;
     [SerializeField] private GameObject missionCompletePanel;
+    private GameObject currentUIPanel;
 
     private void Awake()
     {
@@ -90,7 +94,15 @@ public class UIController : MonoBehaviour
     {
         if (Keyboard.current.escapeKey.wasPressedThisFrame)
         {
-            TogglePause();
+            if(SceneManager.GetActiveScene().name == "MainMenu") return;
+            if((currentUIPanel == pausePanel) || (currentUIPanel == null))
+            {
+                TogglePause();
+            }
+            else if(currentUIPanel == settingsPanel)
+            {
+                ToggleSettingsPanel();
+            }
         }
     }
 
@@ -215,13 +227,30 @@ public class UIController : MonoBehaviour
         {
             pausePanel.SetActive(false);
             _isGamePaused = false;
+            currentUIPanel = null;
             GameManager.Instance.SetTimeScale(GameManager.Instance.GameSpeed);
         }
         else
         {
             pausePanel.SetActive(true);
             _isGamePaused = true;
+            currentUIPanel = pausePanel;
             GameManager.Instance.SetTimeScale(0f);
+        }
+    }
+
+    public void ToggleSettingsPanel()
+    {
+        if(_isSettingsOpen)
+        {
+            settingsPanel.SetActive(false);
+            _isSettingsOpen = false;
+            currentUIPanel = null;
+        } else
+        {
+            settingsPanel.SetActive(true);
+            _isSettingsOpen = true;
+            currentUIPanel = settingsPanel;
         }
     }
 
