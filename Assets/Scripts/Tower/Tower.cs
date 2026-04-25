@@ -4,6 +4,7 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     [SerializeField] private TowerData data;
+    [SerializeField] private Animator animator;
     private CircleCollider2D _circleCollider;
 
     private List<Enemy> _enemiesInRange;
@@ -37,6 +38,10 @@ public class Tower : MonoBehaviour
         {
             _shootTimer = data.shootInterval;
             Shoot();
+        }
+        if(_enemiesInRange.Count == 0 && animator)
+        {
+            animator.SetBool("isAttacking", false);
         }
     }
 
@@ -72,6 +77,7 @@ public class Tower : MonoBehaviour
 
         if (_enemiesInRange.Count > 0)
         {
+            animator.SetBool("isAttacking", true);
             GameObject projectile = _projectilePool.GetPooledObject();
             projectile.transform.position = transform.position;
             projectile.SetActive(true);
