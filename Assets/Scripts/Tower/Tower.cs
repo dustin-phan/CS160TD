@@ -82,6 +82,7 @@ public class Tower : MonoBehaviour
             projectile.transform.position = transform.position;
             projectile.SetActive(true);
             Vector2 _shootDirection = (_enemiesInRange[0].transform.position - transform.position).normalized;
+            projectile.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(_shootDirection.y, _shootDirection.x) * Mathf.Rad2Deg);;
             projectile.GetComponent<Projectile>().Shoot(data, _shootDirection);
         }
     }
