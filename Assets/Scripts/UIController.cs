@@ -23,7 +23,6 @@ public class UIController : MonoBehaviour
 
     [SerializeField] private TowerData[] towers;
     private List<GameObject> activeCards = new List<GameObject>();
-
     private Platform _currentPlatform;
 
     [SerializeField] private Button speed1Button;
@@ -129,12 +128,37 @@ public class UIController : MonoBehaviour
     private void HandlePlatformClicked(Platform platform)
     {
         _currentPlatform = platform;
+        if (_currentPlatform.transform.childCount > 0)
+        {
+            ShowTowerUpgradePanel(platform);
+        }
+        else {
+            ShowTowerPanel();
+        }
+    }
+
+    private void ShowTowerUpgradePanel(Platform platform){
         ShowTowerPanel();
+
+        foreach (var x in activeCards)
+        {
+            Destroy(x);
+        }
+        activeCards.Clear();
+
+        if(platform.towerType.upgrade)
+        {
+            GameObject cardGameObject = Instantiate(towerCardPrefab, cardsContainer);
+            TowerCard card = cardGameObject.GetComponent<TowerCard>();
+            card.Initialize(platform.towerType.upgrade);
+            activeCards.Add(cardGameObject);
+        }
     }
 
     private void ShowTowerPanel()
     {
         towerPanel.SetActive(true);
+        currentUIPanel = towerPanel;
         Platform.towerPanelOpen = true;
         GameManager.Instance.SetTimeScale(0f);
         PopulateTowerCards();
@@ -143,9 +167,10 @@ public class UIController : MonoBehaviour
     public void HideTowerPanel()
     {
         towerPanel.SetActive(false);
+        currentUIPanel = null;
         Platform.towerPanelOpen = false;
         GameManager.Instance.SetTimeScale(GameManager.Instance.GameSpeed);
-
+        _currentPlatform = null;
     }
 
     private void PopulateTowerCards()
@@ -167,12 +192,6 @@ public class UIController : MonoBehaviour
 
     private void HandleTowerSelected(TowerData towerData)
     {
-        if (_currentPlatform.transform.childCount > 0)
-        {
-            HideTowerPanel();
-            StartCoroutine(ShowWarningMessage("This platform already has a tower!"));
-            return;
-        }
         if (GameManager.Instance.Resources >= towerData.cost)
         {
             GameManager.Instance.SpendResources(towerData.cost);

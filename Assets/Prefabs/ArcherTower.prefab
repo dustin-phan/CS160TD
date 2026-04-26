@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2010651935008699297}
   - component: {fileID: 8329585645571011165}
   - component: {fileID: 1954348239448681895}
-  - component: {fileID: -3211048052626893852}
+  - component: {fileID: -7169668904624606106}
   m_Layer: 0
   m_Name: ArcherTower
   m_TagString: Untagged
@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: eb412cf888fdfd241bfc42f11e4d8272, type: 2}
-  animator: {fileID: -3211048052626893852}
+  animator: {fileID: -7169668904624606106}
 --- !u!212 &2010651935008699297
 SpriteRenderer:
   serializedVersion: 2
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 6655604902134506687, guid: 7cc16b8e250ff4446b7144dfa2ddba57, type: 3}
   poolSize: 5
---- !u!95 &-3211048052626893852
+--- !u!95 &-7169668904624606106
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0

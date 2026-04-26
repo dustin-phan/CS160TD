@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af746d875b9a08747af33e830b569b1f, type: 3}
-  m_Name: KnightTower
+  m_Name: KnightTower3
   m_EditorClassIdentifier: Assembly-CSharp::TowerData
-  range: 0.5
+  upgrade: {fileID: 0}
+  range: 1
   shootInterval: 1
-  projectileSpeed: 3
-  projectileDuration: 2
-  projectileSize: 0.5
-  damage: 10
+  projectileSpeed: 2
+  projectileDuration: 5
+  projectileSize: 1
+  damage: 30
   cost: 50
-  sprite: {fileID: 6417244348779880327, guid: b115a05bbe3376c47887acf8038d8f9a, type: 3}
-  prefab: {fileID: 1838302079820638416, guid: 0a3f2d807618834479cde2ab037b92eb, type: 3}
+  sprite: {fileID: 1908704770266616795, guid: 271a58b26a71a044c810d6d7598237a8, type: 3}
+  prefab: {fileID: 1838302079820638416, guid: 96ae3525c7eb64e49b19af714835a8b0, type: 3}

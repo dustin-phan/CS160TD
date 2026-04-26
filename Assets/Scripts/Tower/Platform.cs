@@ -7,6 +7,8 @@ public class Platform : MonoBehaviour
     public static event Action<Platform> OnPlatformClicked;
     [SerializeField] private LayerMask platformLayerMask;
     public static bool towerPanelOpen { get; set; } = false;
+    public TowerData towerType;
+    private GameObject currentTower;
 
     private void Update()
     {
@@ -31,6 +33,11 @@ public class Platform : MonoBehaviour
 
     public void PlaceTower(TowerData data)
     {
-        Instantiate(data.prefab, transform.position, Quaternion.identity, transform);
+        if(towerType)
+        {
+            Destroy(currentTower);
+        }
+        towerType = data;
+        currentTower = Instantiate(data.prefab, transform.position, Quaternion.identity, transform);
     }
 }
