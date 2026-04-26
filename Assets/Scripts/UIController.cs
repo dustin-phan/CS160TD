@@ -146,11 +146,11 @@ public class UIController : MonoBehaviour
         }
         activeCards.Clear();
 
-        if(platform.towerType.upgrade)
+        foreach (var upgrade in platform.towerType.upgrades)
         {
             GameObject cardGameObject = Instantiate(towerCardPrefab, cardsContainer);
             TowerCard card = cardGameObject.GetComponent<TowerCard>();
-            card.Initialize(platform.towerType.upgrade);
+            card.Initialize(upgrade);
             activeCards.Add(cardGameObject);
         }
     }
