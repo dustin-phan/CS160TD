@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af746d875b9a08747af33e830b569b1f, type: 3}
+  m_Name: KnightTower3
+  m_EditorClassIdentifier: Assembly-CSharp::TowerData
+  upgrade: {fileID: 0}
+  range: 1
+  shootInterval: 1
+  projectileSpeed: 2
+  projectileDuration: 5
+  projectileSize: 1
+  damage: 30
+  cost: 50
+  sprite: {fileID: 1908704770266616795, guid: 271a58b26a71a044c810d6d7598237a8, type: 3}
+  prefab: {fileID: 1838302079820638416, guid: 96ae3525c7eb64e49b19af714835a8b0, type: 3}

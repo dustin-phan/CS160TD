@@ -6,11 +6,12 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using System;
+using System.Runtime.CompilerServices;
+using System.Diagnostics;
 
 public class UIController : MonoBehaviour
 {
     public static UIController Instance { get; private set; }
-
     [SerializeField] private TMP_Text waveText;
     [SerializeField] private TMP_Text livesText;
     [SerializeField] private TMP_Text resourcesText;
@@ -22,7 +23,6 @@ public class UIController : MonoBehaviour
 
     [SerializeField] private TowerData[] towers;
     private List<GameObject> activeCards = new List<GameObject>();
-
     private Platform _currentPlatform;
 
     [SerializeField] private Button speed1Button;
@@ -38,9 +38,12 @@ public class UIController : MonoBehaviour
 
     [SerializeField] private GameObject pausePanel;
     private bool _isGamePaused = false;
+    [SerializeField] private GameObject settingsPanel;
+    private bool _isSettingsOpen = false;
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private TMP_Text objectiveText;
     [SerializeField] private GameObject missionCompletePanel;
+    private GameObject currentUIPanel;
 
     private void Awake()
     {
@@ -90,7 +93,15 @@ public class UIController : MonoBehaviour
     {
         if (Keyboard.current.escapeKey.wasPressedThisFrame)
         {
-            TogglePause();
+            if(SceneManager.GetActiveScene().name == "MainMenu") return;
+            if((currentUIPanel == pausePanel) || (currentUIPanel == null))
+            {
+                TogglePause();
+            }
+            else if(currentUIPanel == settingsPanel)
+            {
+                ToggleSettingsPanel();
+            }
         }
     }
 
@@ -117,12 +128,37 @@ public class UIController : MonoBehaviour
     private void HandlePlatformClicked(Platform platform)
     {
         _currentPlatform = platform;
+        if (_currentPlatform.transform.childCount > 0)
+        {
+            ShowTowerUpgradePanel(platform);
+        }
+        else {
+            ShowTowerPanel();
+        }
+    }
+
+    private void ShowTowerUpgradePanel(Platform platform){
         ShowTowerPanel();
+
+        foreach (var x in activeCards)
+        {
+            Destroy(x);
+        }
+        activeCards.Clear();
+
+        foreach (var upgrade in platform.towerType.upgrades)
+        {
+            GameObject cardGameObject = Instantiate(towerCardPrefab, cardsContainer);
+            TowerCard card = cardGameObject.GetComponent<TowerCard>();
+            card.Initialize(upgrade);
+            activeCards.Add(cardGameObject);
+        }
     }
 
     private void ShowTowerPanel()
     {
         towerPanel.SetActive(true);
+        currentUIPanel = towerPanel;
         Platform.towerPanelOpen = true;
         GameManager.Instance.SetTimeScale(0f);
         PopulateTowerCards();
@@ -131,9 +167,10 @@ public class UIController : MonoBehaviour
     public void HideTowerPanel()
     {
         towerPanel.SetActive(false);
+        currentUIPanel = null;
         Platform.towerPanelOpen = false;
         GameManager.Instance.SetTimeScale(GameManager.Instance.GameSpeed);
-
+        _currentPlatform = null;
     }
 
     private void PopulateTowerCards()
@@ -155,12 +192,6 @@ public class UIController : MonoBehaviour
 
     private void HandleTowerSelected(TowerData towerData)
     {
-        if (_currentPlatform.transform.childCount > 0)
-        {
-            HideTowerPanel();
-            StartCoroutine(ShowWarningMessage("This platform already has a tower!"));
-            return;
-        }
         if (GameManager.Instance.Resources >= towerData.cost)
         {
             GameManager.Instance.SpendResources(towerData.cost);
@@ -215,13 +246,30 @@ public class UIController : MonoBehaviour
         {
             pausePanel.SetActive(false);
             _isGamePaused = false;
+            currentUIPanel = null;
             GameManager.Instance.SetTimeScale(GameManager.Instance.GameSpeed);
         }
         else
         {
             pausePanel.SetActive(true);
             _isGamePaused = true;
+            currentUIPanel = pausePanel;
             GameManager.Instance.SetTimeScale(0f);
+        }
+    }
+
+    public void ToggleSettingsPanel()
+    {
+        if(_isSettingsOpen)
+        {
+            settingsPanel.SetActive(false);
+            _isSettingsOpen = false;
+            currentUIPanel = null;
+        } else
+        {
+            settingsPanel.SetActive(true);
+            _isSettingsOpen = true;
+            currentUIPanel = settingsPanel;
         }
     }
 
