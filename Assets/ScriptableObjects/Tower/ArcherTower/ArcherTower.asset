@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af746d875b9a08747af33e830b569b1f, type: 3}
   m_Name: ArcherTower
   m_EditorClassIdentifier: Assembly-CSharp::TowerData
-  upgrade: {fileID: 11400000, guid: 34e9df19e7eb2734e8cce8e8ff799a73, type: 2}
+  upgrades:
+  - {fileID: 11400000, guid: 34e9df19e7eb2734e8cce8e8ff799a73, type: 2}
   range: 3
   shootInterval: 2
   projectileSpeed: 5
