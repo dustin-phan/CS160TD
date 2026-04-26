@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af746d875b9a08747af33e830b569b1f, type: 3}
-  m_Name: ArcherTower2
-  m_EditorClassIdentifier: Assembly-CSharp::TowerData
+  m_Name: WizardTower
+  m_EditorClassIdentifier: 
   upgrades: []
   range: 4
-  shootInterval: 2
-  projectileSpeed: 5.5
+  shootInterval: 0.03
+  projectileSpeed: 2
   projectileDuration: 2
-  projectileSize: 0.5
-  damage: 20
-  cost: 50
-  sprite: {fileID: 4165200713072231581, guid: 06563178e3323424ba541b1b3e929e2e, type: 3}
-  prefab: {fileID: 1838302079820638416, guid: 53c9a99c419ff9640ad539a4900252d5, type: 3}
+  projectileSize: 1
+  damage: 5
+  cost: 75
+  sprite: {fileID: 8398666177505267062, guid: 689e612be07724c4a87d41ac8ec91851, type: 3}
+  prefab: {fileID: 1838302079820638416, guid: 53e325de9f9527749af79083fa532aab, type: 3}
