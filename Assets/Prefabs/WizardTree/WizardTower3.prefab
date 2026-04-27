@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1954348239448681895}
   - component: {fileID: -7169668904624606106}
   m_Layer: 0
-  m_Name: ArcherTower2
+  m_Name: WizardTower3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.5, y: 4.5, z: 4.5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f9e44c4fe44d045967729c6f579ea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 34e9df19e7eb2734e8cce8e8ff799a73, type: 2}
+  data: {fileID: 11400000, guid: fad87edfe3cac8c4587050fafedd9147, type: 2}
   animator: {fileID: -7169668904624606106}
 --- !u!212 &2010651935008699297
 SpriteRenderer:
@@ -99,7 +99,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -4969225072168162266, guid: 048cf28b0fd3e664a95a1c77e4b37184, type: 3}
+  m_Sprite: {fileID: -8496485956532845581, guid: aaae1ec99711a2f4f8cfad503f8a9ff4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632ea8200d298b84d8158ff816a85693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6655604902134506687, guid: d87084491e29b1a459c30414890f7b40, type: 3}
+  prefab: {fileID: 6655604902134506687, guid: 7a363a8ac211bd145bb9d18405005663, type: 3}
   poolSize: 5
 --- !u!95 &-7169668904624606106
 Animator:
@@ -169,7 +169,7 @@ Animator:
   m_GameObject: {fileID: 1838302079820638416}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d9e3bd4612ff433438aed33370814881, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9d9faa424766ba3488087ff57a949af1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

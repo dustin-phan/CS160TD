@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af746d875b9a08747af33e830b569b1f, type: 3}
-  m_Name: WizardTower
+  m_Name: WizardTower3
   m_EditorClassIdentifier: 
   upgrades: []
   range: 5
@@ -18,7 +18,7 @@ MonoBehaviour:
   projectileSpeed: 3
   projectileDuration: 1
   projectileSize: 1.2
-  damage: 5
+  damage: 30
   cost: 75
   sprite: {fileID: 8398666177505267062, guid: 689e612be07724c4a87d41ac8ec91851, type: 3}
-  prefab: {fileID: 1838302079820638416, guid: ed0d45a9130d84b4abc01cc6212db19c, type: 3}
+  prefab: {fileID: 1838302079820638416, guid: ef6e48426a668ea489462f943774fa00, type: 3}

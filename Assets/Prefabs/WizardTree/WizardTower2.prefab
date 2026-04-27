@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1954348239448681895}
   - component: {fileID: -7169668904624606106}
   m_Layer: 0
-  m_Name: WizardTower
+  m_Name: WizardTower2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f9e44c4fe44d045967729c6f579ea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 84fe32977ed7f854b90ee6ecbf223044, type: 2}
+  data: {fileID: 11400000, guid: 68c60943c44b6274192da81bf89cc1c7, type: 2}
   animator: {fileID: -7169668904624606106}
 --- !u!212 &2010651935008699297
 SpriteRenderer:
@@ -99,7 +99,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -8496485956532845581, guid: aaae1ec99711a2f4f8cfad503f8a9ff4, type: 3}
+  m_Sprite: {fileID: 8398666177505267062, guid: 689e612be07724c4a87d41ac8ec91851, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632ea8200d298b84d8158ff816a85693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6655604902134506687, guid: b8c8d242a37daa0449adb37f88e10a78, type: 3}
+  prefab: {fileID: 6655604902134506687, guid: 124f5f73b96e21b45b6086c0aa983485, type: 3}
   poolSize: 5
 --- !u!95 &-7169668904624606106
 Animator:
@@ -169,7 +169,7 @@ Animator:
   m_GameObject: {fileID: 1838302079820638416}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 904478885459b894a8b3bd372d628e32, type: 2}
+  m_Controller: {fileID: 9100000, guid: 79a8e79cbcc8a9c43b51443435398cd1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

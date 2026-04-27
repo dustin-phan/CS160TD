@@ -32,7 +32,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Archer_Idle
+  m_Name: Wizard_Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -46,7 +46,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 30634a9cb784cf24aa9bdc09d1dc8449, type: 2}
+  m_Motion: {fileID: 7400000, guid: 573f99f12e8835143a93936494d99a71, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -58,7 +58,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Wizard_Anim
+  m_Name: Wizard_Anim3
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: isAttacking
@@ -151,7 +151,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 25b764c6a545c8c4499fe3c760d4dfc5, type: 2}
+  m_Motion: {fileID: 7400000, guid: 4a366a5b3e7ee294ab5255a318fa9106, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
