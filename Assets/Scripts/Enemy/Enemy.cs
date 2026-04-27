@@ -1,9 +1,11 @@
 using System;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private EnemyData data;
+    [SerializeField] private Animator animator;
     public EnemyData Data => data;
 
     public static event Action<EnemyData> OnEnemyReachedEnd;
@@ -15,16 +17,18 @@ public class Enemy : MonoBehaviour
     private int _currentWaypoint;
     private float _lives;
     private float _maxLives;
+    private float Deathtimer;
 
     [SerializeField] private Transform healthBar;
     private Vector3 _healthBarOriginalScale;
 
     private bool _hasBeenCounted = false;
-
+    
     private void Awake()
     {
         _currentPath = GameObject.Find("Path1").GetComponent<Path>();
         _healthBarOriginalScale = healthBar.localScale;
+        Deathtimer = 2f;
     }
 
     private void OnEnable()
@@ -80,6 +84,7 @@ public class Enemy : MonoBehaviour
         Vector3 scale = _healthBarOriginalScale;
         scale.x = _healthBarOriginalScale.x * healthPercent;
         healthBar.localScale = scale;
+
     }
 
     public void Initialize(float healthMultiplier)
