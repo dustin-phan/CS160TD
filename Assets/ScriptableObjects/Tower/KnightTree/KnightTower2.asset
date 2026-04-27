@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af746d875b9a08747af33e830b569b1f, type: 3}
   m_Name: KnightTower2
   m_EditorClassIdentifier: Assembly-CSharp::TowerData
-  upgrade: {fileID: 11400000, guid: 55d61e5e125ac08408fc717f7c6a5a04, type: 2}
+  upgrades: []
   range: 0.5
   shootInterval: 1
   projectileSpeed: 3.5
