@@ -19,6 +19,7 @@ public class UIController : MonoBehaviour
 
     [SerializeField] private GameObject towerPanel;
     [SerializeField] private GameObject towerCardPrefab;
+    [SerializeField] private GameObject towerDestroyPrefab;
     [SerializeField] private Transform cardsContainer;
 
     [SerializeField] private TowerData[] towers;
@@ -65,6 +66,7 @@ public class UIController : MonoBehaviour
         GameManager.OnResourcesChanged += UpdateResourcesText;
         Platform.OnPlatformClicked += HandlePlatformClicked;
         TowerCard.OnTowerSelected += HandleTowerSelected;
+        DestroyCard.onDestroySelected += HandleDestroySelected;
         SceneManager.sceneLoaded += OnSceneLoaded;
         Spawner.OnMissionComplete += ShowMissionComplete;
     }
@@ -76,6 +78,7 @@ public class UIController : MonoBehaviour
         GameManager.OnResourcesChanged -= UpdateResourcesText;
         Platform.OnPlatformClicked -= HandlePlatformClicked;
         TowerCard.OnTowerSelected -= HandleTowerSelected;
+        DestroyCard.onDestroySelected -= HandleDestroySelected;
         SceneManager.sceneLoaded -= OnSceneLoaded;
         Spawner.OnMissionComplete -= ShowMissionComplete;
     }
@@ -153,6 +156,7 @@ public class UIController : MonoBehaviour
             card.Initialize(upgrade);
             activeCards.Add(cardGameObject);
         }
+        activeCards.Add(Instantiate(towerDestroyPrefab, cardsContainer));
     }
 
     private void ShowTowerPanel()
@@ -202,6 +206,12 @@ public class UIController : MonoBehaviour
             StartCoroutine(ShowWarningMessage("Not enough resources!"));
         }
 
+        HideTowerPanel();
+    }
+
+    private void HandleDestroySelected()
+    {
+        _currentPlatform.DestroyTower();
         HideTowerPanel();
     }
 
