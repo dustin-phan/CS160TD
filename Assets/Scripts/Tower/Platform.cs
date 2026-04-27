@@ -40,4 +40,13 @@ public class Platform : MonoBehaviour
         towerType = data;
         currentTower = Instantiate(data.prefab, transform.position, Quaternion.identity, transform);
     }
+
+    public void DestroyTower()
+    {
+        if(towerType)
+        {
+            Destroy(currentTower);
+            towerType = null;
+        }
+    }
 }

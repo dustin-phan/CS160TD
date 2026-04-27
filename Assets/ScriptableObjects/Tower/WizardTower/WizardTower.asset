@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af746d875b9a08747af33e830b569b1f, type: 3}
   m_Name: WizardTower
   m_EditorClassIdentifier: 
-  upgrades: []
+  upgrades:
+  - {fileID: 11400000, guid: 68c60943c44b6274192da81bf89cc1c7, type: 2}
+  - {fileID: 11400000, guid: fad87edfe3cac8c4587050fafedd9147, type: 2}
   range: 5
   shootInterval: 0.03
   projectileSpeed: 3
   projectileDuration: 1
-  projectileSize: 1.2
+  projectileSize: 0.4
   damage: 5
   cost: 75
   sprite: {fileID: 8398666177505267062, guid: 689e612be07724c4a87d41ac8ec91851, type: 3}
