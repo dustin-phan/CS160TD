@@ -2731,6 +2731,7 @@ MonoBehaviour:
   warningText: {fileID: 182434449}
   towerPanel: {fileID: 85201671}
   towerCardPrefab: {fileID: 1190810898997269929, guid: e7f3020ace974bc4698c4dc6dbeb6631, type: 3}
+  towerDestroyPrefab: {fileID: 1190810898997269929, guid: cc467f331bec4ed44aba97427deb4aea, type: 3}
   cardsContainer: {fileID: 227493637}
   towers:
   - {fileID: 11400000, guid: eb412cf888fdfd241bfc42f11e4d8272, type: 2}
