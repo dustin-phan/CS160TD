@@ -3,7 +3,8 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
-{
+{  
+
     [SerializeField] private EnemyData data;
     [SerializeField] private Animator animator;
     public EnemyData Data => data;
@@ -74,10 +75,14 @@ public class Enemy : MonoBehaviour
         {
             _hasBeenCounted = true;
             OnEnemyDestroyed?.Invoke(this);
-            gameObject.SetActive(false);
+            animator.SetBool("isDead", true);
         }
     }
 
+    public void deleteenemy()
+    {
+        gameObject.SetActive(false);
+    }
     private void UpdateHealthBar()
     {
         float healthPercent = _lives / _maxLives;
