@@ -75,7 +75,7 @@ public class Enemy : MonoBehaviour
         {
             _hasBeenCounted = true;
             OnEnemyDestroyed?.Invoke(this);
-            animator.SetBool("IsDead", true);
+            animator.SetBool("isDead", true);
         }
     }
 
