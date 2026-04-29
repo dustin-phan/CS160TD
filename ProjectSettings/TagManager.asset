@@ -45,11 +45,26 @@ TagManager:
   - name: Background
     uniqueID: 670184991
     locked: 0
-  - name: Towers
-    uniqueID: 3964367537
+  - name: Walls
+    uniqueID: 2949205753
+    locked: 0
+  - name: Furniture
+    uniqueID: 3047402393
+    locked: 0
+  - name: Floor
+    uniqueID: 4124984259
+    locked: 0
+  - name: Platform
+    uniqueID: 230554165
     locked: 0
   - name: Enemies
     uniqueID: 2397224735
+    locked: 0
+  - name: Bridge
+    uniqueID: 3543384915
+    locked: 0
+  - name: Towers
+    uniqueID: 3964367537
     locked: 0
   - name: UI
     uniqueID: 3380060173
