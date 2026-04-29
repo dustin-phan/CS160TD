@@ -38,6 +38,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private Color selectedTextColor = Color.white;
 
     [SerializeField] private GameObject pausePanel;
+    [SerializeField] private GameObject pauseCloseButton;
     private bool _isGamePaused = false;
     [SerializeField] private GameObject settingsPanel;
     private bool _isSettingsOpen = false;
@@ -275,11 +276,13 @@ public class UIController : MonoBehaviour
             settingsPanel.SetActive(false);
             _isSettingsOpen = false;
             currentUIPanel = null;
+            pauseCloseButton.SetActive(true);
         } else
         {
             settingsPanel.SetActive(true);
             _isSettingsOpen = true;
             currentUIPanel = settingsPanel;
+            pauseCloseButton.SetActive(false);
         }
     }
 
