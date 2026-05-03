@@ -29,7 +29,7 @@ public class Spawner : MonoBehaviour
     private float _timeBetweenWaves = 1f;
     private float _waveCooldown;
     private bool _isBetweenWaves = false;
-    private bool _isEndlessMode = false;
+    private bool _isEndlessMode = true;
 
     /// <summary>1-based wave number, matches the wave label in UI.</summary>
     public int CurrentWaveDisplay => _waveCounter + 1;
