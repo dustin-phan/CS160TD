@@ -16,6 +16,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private TMP_Text livesText;
     [SerializeField] private TMP_Text resourcesText;
     [SerializeField] private TMP_Text warningText;
+    [SerializeField] private GameObject topUIPanel;
 
     [SerializeField] private GameObject towerPanel;
     [SerializeField] private GameObject towerCardPrefab;
@@ -329,7 +330,6 @@ public class UIController : MonoBehaviour
 
     private IEnumerator ShowObjective()
     {
-        objectiveText.text = $"Survive {LevelManager.Instance.CurrentLevel.wavesToWin} waves!";
         objectiveText.gameObject.SetActive(true);
         yield return new WaitForSeconds(3f);
         objectiveText.gameObject.SetActive(false);
@@ -337,7 +337,6 @@ public class UIController : MonoBehaviour
 
     private void ShowMissionComplete()
     {
-        UpdateNextLevelButton();
         missionCompletePanel.SetActive(true);
         GameManager.Instance.SetTimeScale(0f);
     }
@@ -356,6 +355,7 @@ public class UIController : MonoBehaviour
         livesText.gameObject.SetActive(false);
         resourcesText.gameObject.SetActive(false);
         warningText.gameObject.SetActive(false);
+        topUIPanel.SetActive(false);
 
         speed1Button.gameObject.SetActive(false);
         speed2Button.gameObject.SetActive(false);
@@ -368,6 +368,7 @@ public class UIController : MonoBehaviour
         waveText.gameObject.SetActive(true);
         livesText.gameObject.SetActive(true);
         resourcesText.gameObject.SetActive(true);
+        topUIPanel.SetActive(true);
 
         speed1Button.gameObject.SetActive(true);
         speed2Button.gameObject.SetActive(true);
@@ -382,22 +383,4 @@ public class UIController : MonoBehaviour
         missionCompletePanel.SetActive(false);
     }
 
-    public void LoadNextLevel()
-    {
-        var levelManager = LevelManager.Instance;
-        int currentIndex = Array.IndexOf(levelManager.allLevels, levelManager.CurrentLevel);
-        int nextIndex = currentIndex + 1;
-        if (nextIndex < levelManager.allLevels.Length)
-        {
-            missionCompletePanel.SetActive(false);
-            levelManager.LoadLevel(levelManager.allLevels[nextIndex]);
-        }
-    }
-
-    private void UpdateNextLevelButton()
-    {
-        var levelManager = LevelManager.Instance;
-        int currentIndex = Array.IndexOf(levelManager.allLevels, levelManager.CurrentLevel);
-        nextLevelButton.interactable = currentIndex + 1 < levelManager.allLevels.Length;
-    }
 }
