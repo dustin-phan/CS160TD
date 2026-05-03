@@ -39,7 +39,6 @@ public class Platform : MonoBehaviour
         }
         towerType = data;
         currentTower = Instantiate(data.prefab, transform.position, Quaternion.identity, transform);
-        SoundManager.Instance?.PlayTowerPlace();
     }
 
     public void DestroyTower()
@@ -48,7 +47,6 @@ public class Platform : MonoBehaviour
         {
             Destroy(currentTower);
             towerType = null;
-            SoundManager.Instance?.PlayTowerDestroy();
         }
     }
 }

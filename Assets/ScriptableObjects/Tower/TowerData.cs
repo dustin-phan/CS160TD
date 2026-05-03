@@ -15,6 +15,4 @@ public class TowerData : ScriptableObject
     public Sprite sprite;
 
     public GameObject prefab;
-
-    public AudioClip shootSound;
 }
