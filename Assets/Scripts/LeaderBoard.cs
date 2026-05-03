@@ -10,9 +10,16 @@ public class LeaderBoard : MonoBehaviour
     private int height = 60;
     private const int MaxRows = 8;
 
-    private void Awake()
+    private void OnEnable()
+    {
+        Refresh();
+    }
+
+    private void Refresh()
     {
         LeaderboardStatsStore.EnsureFileExists();
+        ClearEntryRows();
+
         List<LeaderboardEntry> top = LeaderboardStatsStore.GetTopEntries(MaxRows);
 
         entryTemplate.gameObject.SetActive(false);
@@ -36,6 +43,16 @@ public class LeaderBoard : MonoBehaviour
                 entryTransform.Find("Player").GetComponent<TMP_Text>().text = "—";
                 entryTransform.Find("Score").GetComponent<TMP_Text>().text = "—";
             }
+        }
+    }
+
+    private void ClearEntryRows()
+    {
+        for (int i = container.childCount - 1; i >= 0; i--)
+        {
+            Transform child = container.GetChild(i);
+            if (child != entryTemplate)
+                Destroy(child.gameObject);
         }
     }
 }

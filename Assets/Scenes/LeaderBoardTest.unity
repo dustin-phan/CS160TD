@@ -4659,6 +4659,7 @@ MonoBehaviour:
   livesText: {fileID: 1040088370}
   resourcesText: {fileID: 1245619224}
   warningText: {fileID: 182434449}
+  topUIPanel: {fileID: 0}
   towerPanel: {fileID: 85201671}
   towerCardPrefab: {fileID: 1190810898997269929, guid: e7f3020ace974bc4698c4dc6dbeb6631, type: 3}
   towerDestroyPrefab: {fileID: 1190810898997269929, guid: cc467f331bec4ed44aba97427deb4aea, type: 3}
@@ -8458,7 +8459,7 @@ GameObject:
   - component: {fileID: 1374524919}
   - component: {fileID: 1374524918}
   m_Layer: 0
-  m_Name: InputMangaer
+  m_Name: InputManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
