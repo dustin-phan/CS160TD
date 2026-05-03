@@ -29,7 +29,7 @@ public class Spawner : MonoBehaviour
     private float _timeBetweenWaves = 1f;
     private float _waveCooldown;
     private bool _isBetweenWaves = false;
-    private bool _isEndlessMode = false;
+    private bool _isEndlessMode = true;
 
     private void Awake()
     {

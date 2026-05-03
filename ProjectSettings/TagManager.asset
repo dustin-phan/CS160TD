@@ -66,6 +66,9 @@ TagManager:
   - name: Towers
     uniqueID: 3964367537
     locked: 0
+  - name: UI Images
+    uniqueID: 3870771429
+    locked: 0
   - name: UI
     uniqueID: 3380060173
     locked: 0
