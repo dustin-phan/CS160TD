@@ -10,6 +10,8 @@ public class Tower : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private List<Enemy> _enemiesInRange;
     private ObjectPooler _projectilePool;
+    private bool moving = false;
+    private Vector3 target;
 
     private float _shootTimer;
 
@@ -31,6 +33,22 @@ public class Tower : MonoBehaviour
         _enemiesInRange = new List<Enemy>();
         _projectilePool = GetComponent<ObjectPooler>();
         _shootTimer = data.shootInterval;
+    }
+
+    private void Update()
+    {
+        if (Time.timeScale == 0f) return;
+        if(moving)
+        {
+            if(transform.position != target)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, target, 3 * Time.deltaTime);
+            }
+            else
+            {
+                moving = false;
+            }
+        }
     }
 
     private void OnDrawGizmos()
@@ -87,20 +105,20 @@ public class Tower : MonoBehaviour
     //Toggles the color of the tower. Used when the tower is left-clicked for moving
     public void ToggleTowerHighlight()
     {
-        if(isHighlighted)
-        {
-            isHighlighted = false;
-            _spriteRenderer.color = Color.white;
-        }
-        else
-        {
-            isHighlighted = true;
-            _spriteRenderer.color = Color.red;
-        }
+        Debug.Log(data.name);
+
+        isHighlighted = !isHighlighted;
+        _spriteRenderer.color = isHighlighted ? Color.red : Color.white;
     }
 
     public bool isTowerHighlighted()
     {
         return isHighlighted;
+    }
+
+    public void moveTo(Vector3 target)
+    {
+        this.target = target;
+        moving = true;
     }
 }

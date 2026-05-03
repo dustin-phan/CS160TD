@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class GameManager : MonoBehaviour
     private float _gameSpeed = 1f;
     public float GameSpeed => _gameSpeed;
 
+    [SerializeField] private LayerMask platformLayerMask;
+    private GameObject selectedTower;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -26,6 +30,56 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+        }
+    }
+
+    private void Update()
+    {
+        if (Time.timeScale == 0f)
+            return;
+
+        if (Mouse.current.rightButton.wasPressedThisFrame)
+        {
+            Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+            RaycastHit2D raycastHit = Physics2D.Raycast(worldPoint, Vector2.zero, Mathf.Infinity, platformLayerMask);
+
+            if (raycastHit.collider != null)
+            {
+                Platform platform = raycastHit.collider.GetComponent<Platform>();
+                if (platform != null)
+                {
+                    //Move tower if there is a tower selected and the next clicked platform is available
+                    if((selectedTower != null) && !platform.IsOccupied())
+                    {
+                        //change tower animation
+                        //Free old platform
+                        platform.freePlatform();
+                        //Reserve new platform
+                        platform.SetTower(selectedTower);
+                        //move the tower prefab object
+                        Tower selectedTowerScript = selectedTower.GetComponent<Tower>();
+                        selectedTowerScript.moveTo(platform.transform.position + new Vector3(0f, 0.5f, 0f));
+                        //reset selection
+                        selectedTower = null;
+
+                    }
+                    //if there is a new tower being selected, unselect the old one
+                    else if(selectedTower != null)
+                    {
+                        Tower selectedTowerScript = selectedTower.GetComponent<Tower>();
+                        selectedTowerScript.ToggleTowerHighlight();
+                        selectedTower = platform.GetTower();
+                        selectedTowerScript.ToggleTowerHighlight();
+                    }
+                    //select new tower
+                    else if(selectedTower == null)
+                    {
+                        selectedTower = platform.GetTower();
+                        Tower selectedTowerScript = selectedTower.GetComponent<Tower>();
+                        selectedTowerScript.ToggleTowerHighlight();
+                    }
+                }
+            }
         }
     }
 
