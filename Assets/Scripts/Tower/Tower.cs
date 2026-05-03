@@ -42,11 +42,12 @@ public class Tower : MonoBehaviour
         {
             if(transform.position != target)
             {
-                transform.position = Vector3.MoveTowards(transform.position, target, 3 * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, target, 1 * Time.deltaTime);
             }
             else
             {
                 moving = false;
+                animator.SetBool("isFlying", false);
             }
         }
     }
@@ -118,7 +119,14 @@ public class Tower : MonoBehaviour
 
     public void moveTo(Vector3 target)
     {
+        animator.SetBool("isAttacking", false);
+        animator.SetBool("isFlying", true);
         this.target = target;
         moving = true;
+    }
+
+    public TowerData getData()
+    {
+        return data;
     }
 }

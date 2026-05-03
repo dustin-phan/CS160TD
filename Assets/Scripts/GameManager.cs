@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private LayerMask platformLayerMask;
     private GameObject selectedTower;
+    private Platform originalPlatform;
 
     private void Awake()
     {
@@ -53,11 +54,13 @@ public class GameManager : MonoBehaviour
                     {
                         //change tower animation
                         //Free old platform
-                        platform.freePlatform();
+                        originalPlatform.freePlatform(); //must keep reference to original platform
                         //Reserve new platform
                         platform.SetTower(selectedTower);
+                        selectedTower.transform.SetParent(platform.transform); //must make the tower the hierarchy child of the new platform
                         //move the tower prefab object
                         Tower selectedTowerScript = selectedTower.GetComponent<Tower>();
+                        selectedTowerScript.ToggleTowerHighlight();
                         selectedTowerScript.moveTo(platform.transform.position + new Vector3(0f, 0.5f, 0f));
                         //reset selection
                         selectedTower = null;
@@ -75,6 +78,7 @@ public class GameManager : MonoBehaviour
                     else if(selectedTower == null)
                     {
                         selectedTower = platform.GetTower();
+                        originalPlatform = platform;
                         Tower selectedTowerScript = selectedTower.GetComponent<Tower>();
                         selectedTowerScript.ToggleTowerHighlight();
                     }

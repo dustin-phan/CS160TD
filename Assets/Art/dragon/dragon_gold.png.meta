@@ -1,0 +1,1289 @@
+fileFormatVersion: 2
+guid: ca8108748001109459e0b4905a208f3b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6229539220947313224
+    second: dragon_gold_0
+  - first:
+      213: 8857674839995422076
+    second: dragon_gold_1
+  - first:
+      213: 4020885129004870998
+    second: dragon_gold_2
+  - first:
+      213: 4163809362135876260
+    second: dragon_gold_3
+  - first:
+      213: -8453063702747968312
+    second: dragon_gold_4
+  - first:
+      213: 5808288918949783352
+    second: dragon_gold_5
+  - first:
+      213: 8226676979002316692
+    second: dragon_gold_6
+  - first:
+      213: -7021718671559648075
+    second: dragon_gold_7
+  - first:
+      213: 8798351699908086740
+    second: dragon_gold_8
+  - first:
+      213: -5509873295416800343
+    second: dragon_gold_9
+  - first:
+      213: -7619864460308259957
+    second: dragon_gold_10
+  - first:
+      213: 425830002898088776
+    second: dragon_gold_11
+  - first:
+      213: -22194132520418811
+    second: dragon_gold_12
+  - first:
+      213: -3436389213066199400
+    second: dragon_gold_13
+  - first:
+      213: -5611525709438421097
+    second: dragon_gold_14
+  - first:
+      213: -3613349994128994514
+    second: dragon_gold_15
+  - first:
+      213: -8417274876981135407
+    second: dragon_gold_16
+  - first:
+      213: -4047505029027173275
+    second: dragon_gold_17
+  - first:
+      213: 1633029407855984566
+    second: dragon_gold_18
+  - first:
+      213: 4812712584367477855
+    second: dragon_gold_19
+  - first:
+      213: -2335457201975376494
+    second: dragon_gold_20
+  - first:
+      213: -261600435508581868
+    second: dragon_gold_21
+  - first:
+      213: 5131259667571269097
+    second: dragon_gold_22
+  - first:
+      213: 1644139460203052770
+    second: dragon_gold_23
+  - first:
+      213: 1742073984914481776
+    second: dragon_gold_24
+  - first:
+      213: -8034632221727847920
+    second: dragon_gold_25
+  - first:
+      213: -3866433900874261356
+    second: dragon_gold_26
+  - first:
+      213: 2233067948234420076
+    second: dragon_gold_27
+  - first:
+      213: -1715733771133392906
+    second: dragon_gold_28
+  - first:
+      213: 3046450503578092506
+    second: dragon_gold_29
+  - first:
+      213: 7266081583771938956
+    second: dragon_gold_30
+  - first:
+      213: -5010927693470676878
+    second: dragon_gold_31
+  - first:
+      213: 252379556359987513
+    second: dragon_gold_32
+  - first:
+      213: 284192844206290905
+    second: dragon_gold_33
+  - first:
+      213: -1854838693895960106
+    second: dragon_gold_34
+  - first:
+      213: 6824719618939098997
+    second: dragon_gold_35
+  - first:
+      213: -6192518774930935448
+    second: dragon_gold_36
+  - first:
+      213: -5655163195314844482
+    second: dragon_gold_37
+  - first:
+      213: 1506830708511567399
+    second: dragon_gold_38
+  - first:
+      213: -6662930914675466808
+    second: dragon_gold_39
+  - first:
+      213: 6887161300081854128
+    second: dragon_gold_40
+  - first:
+      213: 4578641481279940201
+    second: dragon_gold_41
+  - first:
+      213: -5705546665447422382
+    second: dragon_gold_42
+  - first:
+      213: 1060876599894999255
+    second: dragon_gold_43
+  - first:
+      213: 9166797744960531218
+    second: dragon_gold_44
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dragon_gold_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 596
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bd5215851b3c89a0800000000000000
+      internalID: -6229539220947313224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_1
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 596
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7597d54658ccea70800000000000000
+      internalID: 8857674839995422076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_2
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 597
+        width: 41
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65d6cf4a8bd0dc730800000000000000
+      internalID: 4020885129004870998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_3
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 599
+        width: 45
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a20e86dd82d8c930800000000000000
+      internalID: 4163809362135876260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_4
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 601
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cc85fd395fa0ba80800000000000000
+      internalID: -8453063702747968312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_5
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 601
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 837e6d68fff2b9050800000000000000
+      internalID: 5808288918949783352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_6
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 599
+        width: 45
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 497115720270b2270800000000000000
+      internalID: 8226676979002316692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_7
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 597
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bc95f42218dd8e90800000000000000
+      internalID: -7021718671559648075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_8
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 511
+        width: 47
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dbc9f161460a1a70800000000000000
+      internalID: 8798351699908086740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_9
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 511
+        width: 47
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ab454d2e6ff883b0800000000000000
+      internalID: -5509873295416800343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_10
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 512
+        width: 47
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8bd3b625adc04690800000000000000
+      internalID: -7619864460308259957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_11
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 514
+        width: 48
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 843b179a12ad8e500800000000000000
+      internalID: 425830002898088776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_12
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 509
+        width: 46
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 502c507dd8621bff0800000000000000
+      internalID: -22194132520418811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_13
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 515
+        width: 46
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89e743da73e7f40d0800000000000000
+      internalID: -3436389213066199400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_14
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 514
+        width: 51
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79773f0391bdf12b0800000000000000
+      internalID: -5611525709438421097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_15
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 512
+        width: 50
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2f08ce135dcaddc0800000000000000
+      internalID: -3613349994128994514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_16
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 404
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d738b49815df2b80800000000000000
+      internalID: -8417274876981135407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_17
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 403
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56c6a36ee9f54d7c0800000000000000
+      internalID: -4047505029027173275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_18
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 403
+        width: 37
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bfb503289fa9a610800000000000000
+      internalID: 1633029407855984566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_19
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 404
+        width: 48
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f54964db8903ac240800000000000000
+      internalID: 4812712584367477855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_20
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 404
+        width: 45
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29541207c0ac69fd0800000000000000
+      internalID: -2335457201975376494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_21
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 404
+        width: 49
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41a6c683acb9e5cf0800000000000000
+      internalID: -261600435508581868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_22
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 308
+        width: 50
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eddfd72b75e53740800000000000000
+      internalID: 5131259667571269097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_23
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 310
+        width: 53
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eefa96c02821d610800000000000000
+      internalID: 1644139460203052770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_24
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 310
+        width: 51
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 072e6433f071d2810800000000000000
+      internalID: 1742073984914481776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_25
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 309
+        width: 53
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a010b40904f7090800000000000000
+      internalID: -8034632221727847920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_26
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 212
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49c9cd63adaa75ac0800000000000000
+      internalID: -3866433900874261356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_27
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 211
+        width: 33
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6fa2d5b7737dfe10800000000000000
+      internalID: 2233067948234420076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_28
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 211
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f7e37ab93d7038e0800000000000000
+      internalID: -1715733771133392906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_29
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 211
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad3059b979a274a20800000000000000
+      internalID: 3046450503578092506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_30
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 116
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c80fbbdf3be46d460800000000000000
+      internalID: 7266081583771938956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_31
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 123
+        width: 47
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2784383dfcb957ab0800000000000000
+      internalID: -5010927693470676878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_32
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 123
+        width: 46
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 931686d8ed1a08300800000000000000
+      internalID: 252379556359987513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_33
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 120
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d7bf96d2e7a1f300800000000000000
+      internalID: 284192844206290905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_34
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 118
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d98ea6090a4246e0800000000000000
+      internalID: -1854838693895960106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_35
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 123
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5771182a55646be50800000000000000
+      internalID: 6824719618939098997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_36
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 122
+        width: 42
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 861fd4bcbf0cf0aa0800000000000000
+      internalID: -6192518774930935448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_37
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 122
+        width: 54
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebc45644903d481b0800000000000000
+      internalID: -5655163195314844482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_38
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 122
+        width: 58
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72e6b7dbb8659e410800000000000000
+      internalID: 1506830708511567399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_39
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 122
+        width: 58
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cddcc382a38883a0800000000000000
+      internalID: -6662930914675466808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_40
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 122
+        width: 62
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b6423276bc149f50800000000000000
+      internalID: 6887161300081854128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_41
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 22
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9662f852b2a9a8f30800000000000000
+      internalID: 4578641481279940201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_42
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 22
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 256879c7983d1d0b0800000000000000
+      internalID: -5705546665447422382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_43
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 22
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d0044795adf8be00800000000000000
+      internalID: 1060876599894999255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_gold_44
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 22
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21b69343bf1073f70800000000000000
+      internalID: 9166797744960531218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a08b88005f867ac499625ccd27c83d84
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      dragon_gold_0: -6229539220947313224
+      dragon_gold_1: 8857674839995422076
+      dragon_gold_10: -7619864460308259957
+      dragon_gold_11: 425830002898088776
+      dragon_gold_12: -22194132520418811
+      dragon_gold_13: -3436389213066199400
+      dragon_gold_14: -5611525709438421097
+      dragon_gold_15: -3613349994128994514
+      dragon_gold_16: -8417274876981135407
+      dragon_gold_17: -4047505029027173275
+      dragon_gold_18: 1633029407855984566
+      dragon_gold_19: 4812712584367477855
+      dragon_gold_2: 4020885129004870998
+      dragon_gold_20: -2335457201975376494
+      dragon_gold_21: -261600435508581868
+      dragon_gold_22: 5131259667571269097
+      dragon_gold_23: 1644139460203052770
+      dragon_gold_24: 1742073984914481776
+      dragon_gold_25: -8034632221727847920
+      dragon_gold_26: -3866433900874261356
+      dragon_gold_27: 2233067948234420076
+      dragon_gold_28: -1715733771133392906
+      dragon_gold_29: 3046450503578092506
+      dragon_gold_3: 4163809362135876260
+      dragon_gold_30: 7266081583771938956
+      dragon_gold_31: -5010927693470676878
+      dragon_gold_32: 252379556359987513
+      dragon_gold_33: 284192844206290905
+      dragon_gold_34: -1854838693895960106
+      dragon_gold_35: 6824719618939098997
+      dragon_gold_36: -6192518774930935448
+      dragon_gold_37: -5655163195314844482
+      dragon_gold_38: 1506830708511567399
+      dragon_gold_39: -6662930914675466808
+      dragon_gold_4: -8453063702747968312
+      dragon_gold_40: 6887161300081854128
+      dragon_gold_41: 4578641481279940201
+      dragon_gold_42: -5705546665447422382
+      dragon_gold_43: 1060876599894999255
+      dragon_gold_44: 9166797744960531218
+      dragon_gold_5: 5808288918949783352
+      dragon_gold_6: 8226676979002316692
+      dragon_gold_7: -7021718671559648075
+      dragon_gold_8: 8798351699908086740
+      dragon_gold_9: -5509873295416800343
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

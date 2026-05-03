@@ -74,6 +74,7 @@ public class Platform : MonoBehaviour
     public void SetTower(GameObject tower)
     {
         currentTower = tower;
+        towerType = tower.GetComponent<Tower>().getData();
     }
 
 }
