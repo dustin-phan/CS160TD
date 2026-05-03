@@ -14,5 +14,6 @@ public class TowerData : ScriptableObject
     public int cost;
     public Sprite sprite;
 
+    //public GameObject prefab;
     public GameObject prefab;
 }

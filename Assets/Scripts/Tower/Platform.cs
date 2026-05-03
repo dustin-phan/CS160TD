@@ -16,19 +16,19 @@ public class Platform : MonoBehaviour
             return;
 
         if (Mouse.current.leftButton.wasPressedThisFrame)
-            {
-                Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-                RaycastHit2D raycastHit = Physics2D.Raycast(worldPoint, Vector2.zero, Mathf.Infinity, platformLayerMask);
+        {
+            Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+            RaycastHit2D raycastHit = Physics2D.Raycast(worldPoint, Vector2.zero, Mathf.Infinity, platformLayerMask);
 
-                if (raycastHit.collider != null)
+            if (raycastHit.collider != null)
+            {
+                Platform platform = raycastHit.collider.GetComponent<Platform>();
+                if (platform != null)
                 {
-                    Platform platform = raycastHit.collider.GetComponent<Platform>();
-                    if (platform != null)
-                    {
-                        OnPlatformClicked?.Invoke(platform);
-                    }
+                    OnPlatformClicked?.Invoke(platform);
                 }
             }
+        }
     }
 
     public void PlaceTower(TowerData data)
@@ -38,7 +38,7 @@ public class Platform : MonoBehaviour
             Destroy(currentTower);
         }
         towerType = data;
-        currentTower = currentTower = Instantiate(
+        currentTower = Instantiate(
             data.prefab, 
             transform.position + new Vector3(0f, 0.5f, 0f), 
             Quaternion.identity, 
@@ -54,4 +54,27 @@ public class Platform : MonoBehaviour
             towerType = null;
         }
     }
+
+    public GameObject GetTower()
+    {
+        if (currentTower == null) return null;
+        return currentTower;
+    }
+
+    public bool IsOccupied()
+    {
+        return currentTower != null;
+    }
+
+    public void freePlatform()
+    {
+        currentTower = null;
+    }
+
+    public void SetTower(GameObject tower)
+    {
+        currentTower = tower;
+        towerType = tower.GetComponent<Tower>().getData();
+    }
+
 }
