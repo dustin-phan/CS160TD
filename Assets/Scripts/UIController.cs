@@ -67,6 +67,7 @@ public class UIController : MonoBehaviour
         GameManager.OnLivesChanged += UpdateLivesText;
         GameManager.OnResourcesChanged += UpdateResourcesText;
         Platform.OnPlatformClicked += HandlePlatformClicked;
+        Platform.OnTowerClicked += HandleTowerClicked;
         TowerCard.OnTowerSelected += HandleTowerSelected;
         DestroyCard.onDestroySelected += HandleDestroySelected;
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -79,6 +80,7 @@ public class UIController : MonoBehaviour
         GameManager.OnLivesChanged -= UpdateLivesText;
         GameManager.OnResourcesChanged -= UpdateResourcesText;
         Platform.OnPlatformClicked -= HandlePlatformClicked;
+        Platform.OnTowerClicked -= HandleTowerClicked;
         TowerCard.OnTowerSelected -= HandleTowerSelected;
         DestroyCard.onDestroySelected -= HandleDestroySelected;
         SceneManager.sceneLoaded -= OnSceneLoaded;
@@ -141,6 +143,19 @@ public class UIController : MonoBehaviour
             ShowTowerPanel();
         }
     }
+
+     //Highlights the tower
+    private void HandleTowerClicked(Tower tower)
+    {
+        if (tower.isTowerHighlighted())
+        {
+            tower.ToggleTowerHighlight();
+        }
+        else {
+            tower.ToggleTowerHighlight();
+        }
+    }
+
 
     private void ShowTowerUpgradePanel(Platform platform){
         ShowTowerPanel();

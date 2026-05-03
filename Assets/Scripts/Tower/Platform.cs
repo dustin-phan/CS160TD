@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class Platform : MonoBehaviour
 {
     public static event Action<Platform> OnPlatformClicked;
+    public static event Action<Tower> OnTowerClicked;
     [SerializeField] private LayerMask platformLayerMask;
     public static bool towerPanelOpen { get; set; } = false;
     public TowerData towerType;
@@ -16,19 +17,33 @@ public class Platform : MonoBehaviour
             return;
 
         if (Mouse.current.leftButton.wasPressedThisFrame)
-            {
-                Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-                RaycastHit2D raycastHit = Physics2D.Raycast(worldPoint, Vector2.zero, Mathf.Infinity, platformLayerMask);
+        {
+            Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+            RaycastHit2D raycastHit = Physics2D.Raycast(worldPoint, Vector2.zero, Mathf.Infinity, platformLayerMask);
 
-                if (raycastHit.collider != null)
+            if (raycastHit.collider != null)
+            {
+                Platform platform = raycastHit.collider.GetComponent<Platform>();
+                if (platform != null)
                 {
-                    Platform platform = raycastHit.collider.GetComponent<Platform>();
-                    if (platform != null)
-                    {
-                        OnPlatformClicked?.Invoke(platform);
-                    }
+                    OnPlatformClicked?.Invoke(platform);
                 }
             }
+        }
+        else if(Mouse.current.rightButton.wasPressedThisFrame)
+        {
+            Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+            RaycastHit2D raycastHit = Physics2D.Raycast(worldPoint, Vector2.zero, Mathf.Infinity, platformLayerMask);
+
+            if (raycastHit.collider != null)
+            {
+                Platform platform = raycastHit.collider.GetComponent<Platform>();
+                if ((platform != null) && (currentTower != null))
+                {
+                    OnTowerClicked?.Invoke(currentTower.GetComponent<Tower>());
+                }
+            }
+        }
     }
 
     public void PlaceTower(TowerData data)

@@ -5,8 +5,9 @@ public class Tower : MonoBehaviour
 {
     [SerializeField] private TowerData data;
     [SerializeField] private Animator animator;
+    private bool isHighlighted = false;
     private CircleCollider2D _circleCollider;
-
+    private SpriteRenderer _spriteRenderer;
     private List<Enemy> _enemiesInRange;
     private ObjectPooler _projectilePool;
 
@@ -26,6 +27,7 @@ public class Tower : MonoBehaviour
     {
         _circleCollider = GetComponent<CircleCollider2D>();
         _circleCollider.radius = data.range;
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         _enemiesInRange = new List<Enemy>();
         _projectilePool = GetComponent<ObjectPooler>();
         _shootTimer = data.shootInterval;
@@ -80,5 +82,25 @@ public class Tower : MonoBehaviour
     private void HandleEnemyDestroyed(Enemy enemy)
     {
         _enemiesInRange.Remove(enemy);
+    }
+
+    //Toggles the color of the tower. Used when the tower is left-clicked for moving
+    public void ToggleTowerHighlight()
+    {
+        if(isHighlighted)
+        {
+            isHighlighted = false;
+            _spriteRenderer.color = Color.white;
+        }
+        else
+        {
+            isHighlighted = true;
+            _spriteRenderer.color = Color.red;
+        }
+    }
+
+    public bool isTowerHighlighted()
+    {
+        return isHighlighted;
     }
 }
