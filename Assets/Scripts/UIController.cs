@@ -330,7 +330,6 @@ public class UIController : MonoBehaviour
 
     private IEnumerator ShowObjective()
     {
-        objectiveText.text = $"Survive as many waves as you can!";
         objectiveText.gameObject.SetActive(true);
         yield return new WaitForSeconds(3f);
         objectiveText.gameObject.SetActive(false);
