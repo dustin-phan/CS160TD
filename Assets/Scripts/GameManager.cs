@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
                         selectedTowerScript.ToggleTowerHighlight();
                     }
                     //select new tower
-                    else if(selectedTower == null)
+                    else if(selectedTower == null && platform.IsOccupied())
                     {
                         selectedTower = platform.GetTower();
                         originalPlatform = platform;
