@@ -31,6 +31,9 @@ public class Spawner : MonoBehaviour
     private bool _isBetweenWaves = false;
     private bool _isEndlessMode = false;
 
+    /// <summary>1-based wave number, matches the wave label in UI.</summary>
+    public int CurrentWaveDisplay => _waveCounter + 1;
+
     private void Awake()
     {
         _poolDictionary = new Dictionary<EnemyType, ObjectPooler>()

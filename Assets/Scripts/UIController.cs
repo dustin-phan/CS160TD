@@ -46,6 +46,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private TMP_Text objectiveText;
     [SerializeField] private GameObject missionCompletePanel;
     private GameObject currentUIPanel;
+    private bool _hasShownGameOver;
 
     private void Awake()
     {
@@ -304,12 +305,22 @@ public class UIController : MonoBehaviour
 
     private void ShowGameOver()
     {
+        if (_hasShownGameOver)
+            return;
+        _hasShownGameOver = true;
+
+        string playerName = PlayerPrefs.GetString("PlayerName", "Default Player");
+        int round = Spawner.Instance != null ? Spawner.Instance.CurrentWaveDisplay : 1;
+        LeaderboardStatsStore.AppendGameOverEntry(playerName, round);
+
         GameManager.Instance.SetTimeScale(0f);
         gameOverPanel.SetActive(true);
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        _hasShownGameOver = false;
+
         Camera mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         Canvas canvas = GetComponent<Canvas>();
         canvas.worldCamera = mainCamera;
