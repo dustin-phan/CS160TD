@@ -19,18 +19,18 @@ public class AudioSetup : Editor
         }
 
         // --- Load all audio clips ---
-        var archerShoot  = Load("Assets/Audio/archer_shoot.ogg");
-        var knightShoot  = Load("Assets/Audio/knight_shoot.wav");
-        var wizardShoot  = Load("Assets/Audio/wizard_shoot.ogg");
-        var enemyDeath   = Load("Assets/Audio/enemy_death.ogg");
-        var enemyBreach  = Load("Assets/Audio/enemy_breach.ogg");
-        var towerPlace   = Load("Assets/Audio/tower_place.ogg");
-        var towerDestroy = Load("Assets/Audio/tower_destroy.ogg");
-        var waveStart    = Load("Assets/Audio/wave_start.ogg");
-        var gameOver     = Load("Assets/Audio/game_over.ogg");
-        var victory      = Load("Assets/Audio/victory.ogg");
-        var musicBg      = Load("Assets/Audio/music_bg.mp3");
-        var buttonClick  = Load("Assets/Audio/button_click.wav");
+        var archerShoot  = Load("Assets/Resources/Audio/archer_shoot.ogg");
+        var knightShoot  = Load("Assets/Resources/Audio/knight_shoot.wav");
+        var wizardShoot  = Load("Assets/Resources/Audio/wizard_shoot.ogg");
+        var enemyDeath   = Load("Assets/Resources/Audio/enemy_death.ogg");
+        var enemyBreach  = Load("Assets/Resources/Audio/enemy_breach.ogg");
+        var towerPlace   = Load("Assets/Resources/Audio/tower_place.ogg");
+        var towerDestroy = Load("Assets/Resources/Audio/tower_destroy.ogg");
+        var waveStart    = Load("Assets/Resources/Audio/wave_start.ogg");
+        var gameOver     = Load("Assets/Resources/Audio/game_over.ogg");
+        var victory      = Load("Assets/Resources/Audio/victory.ogg");
+        var musicBg      = Load("Assets/Resources/Audio/music_bg.mp3");
+        var buttonClick  = Load("Assets/Resources/Audio/button_click.wav");
 
         // --- SoundManager ---
         SoundManager sm = SetupManager<SoundManager>("SoundManager");
