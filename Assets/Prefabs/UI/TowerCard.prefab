@@ -88,7 +88,6 @@ GameObject:
   - component: {fileID: 9069468844209803717}
   - component: {fileID: 4834853795161094582}
   - component: {fileID: -1425715862052391557}
-  - component: {fileID: -3189735270063817376}
   m_Layer: 5
   m_Name: TowerCard
   m_TagString: Untagged
@@ -225,18 +224,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &-3189735270063817376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190810898997269929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e03c7b4661e2b40528597788616a9cfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SoundButton
 --- !u!1 &8960627063960001677
 GameObject:
   m_ObjectHideFlags: 0

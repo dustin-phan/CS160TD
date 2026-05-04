@@ -103,7 +103,6 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -149,7 +148,6 @@ GameObject:
   - component: {fileID: 5614265597307564387}
   - component: {fileID: 1310798191845634207}
   - component: {fileID: 3982142537637919656}
-  - component: {fileID: -5210843174338026565}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -259,15 +257,3 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &-5210843174338026565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4878287646331175166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e03c7b4661e2b40528597788616a9cfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SoundButton

@@ -22,4 +22,3 @@ MonoBehaviour:
   cost: 75
   sprite: {fileID: 9116638073806022981, guid: 689e612be07724c4a87d41ac8ec91851, type: 3}
   prefab: {fileID: 1838302079820638416, guid: d54e5a040d0f9644a9a16e874df2e49f, type: 3}
-  shootSound: {fileID: 8300000, guid: 7ad4cfad205a8486ba9f16be01758e24, type: 3}
