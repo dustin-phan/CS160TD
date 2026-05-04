@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
                         //move the tower prefab object
                         Tower selectedTowerScript = selectedTower.GetComponent<Tower>();
                         selectedTowerScript.ToggleTowerHighlight();
-                        selectedTowerScript.moveTo(platform.transform.position + new Vector3(0f, 0.5f, 0f));
+                        selectedTowerScript.moveTo(platform);
                         //reset selection
                         selectedTower = null;
 
@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
                         selectedTowerScript.ToggleTowerHighlight();
                     }
                     //select new tower
-                    else if(selectedTower == null && platform.IsOccupied())
+                    else if(selectedTower == null && platform.IsOccupied() && !platform.IsMenuLocked())
                     {
                         selectedTower = platform.GetTower();
                         originalPlatform = platform;

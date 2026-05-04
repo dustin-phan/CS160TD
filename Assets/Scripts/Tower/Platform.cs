@@ -9,6 +9,7 @@ public class Platform : MonoBehaviour
     public static bool towerPanelOpen { get; set; } = false;
     public TowerData towerType;
     private GameObject currentTower;
+    private bool MenuLocked = false;
 
     private void Update()
     {
@@ -75,6 +76,16 @@ public class Platform : MonoBehaviour
     {
         currentTower = tower;
         towerType = tower.GetComponent<Tower>().getData();
+    }
+
+    public void ToggleMenuLock()
+    {
+        MenuLocked = !MenuLocked;
+    }
+
+    public bool IsMenuLocked()
+    {
+        return MenuLocked;
     }
 
 }

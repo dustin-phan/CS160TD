@@ -134,11 +134,11 @@ public class UIController : MonoBehaviour
     private void HandlePlatformClicked(Platform platform)
     {
         _currentPlatform = platform;
-        if (_currentPlatform.transform.childCount > 0)
+        if (_currentPlatform.transform.childCount > 0 && !_currentPlatform.IsMenuLocked())
         {
             ShowTowerUpgradePanel(platform);
         }
-        else {
+        else if(!_currentPlatform.IsMenuLocked()){
             ShowTowerPanel();
         }
     }

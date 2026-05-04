@@ -11,7 +11,7 @@ public class Tower : MonoBehaviour
     private List<Enemy> _enemiesInRange;
     private ObjectPooler _projectilePool;
     private bool moving = false;
-    private Vector3 target;
+    private Platform target;
 
     private float _shootTimer;
 
@@ -40,14 +40,16 @@ public class Tower : MonoBehaviour
         if (Time.timeScale == 0f) return;
         if(moving)
         {
-            if(transform.position != target)
+            if(transform.position != target.transform.position + new Vector3(0f, 0.5f, 0f))
             {
-                transform.position = Vector3.MoveTowards(transform.position, target, 1 * Time.deltaTime);
+                //unlock menu
+                transform.position = Vector3.MoveTowards(transform.position, target.transform.position + new Vector3(0f, 0.5f, 0f), 1 * Time.deltaTime);
             }
             else
             {
                 moving = false;
                 animator.SetBool("isFlying", false);
+                target.ToggleMenuLock();
             }
         }
     }
@@ -117,8 +119,10 @@ public class Tower : MonoBehaviour
         return isHighlighted;
     }
 
-    public void moveTo(Vector3 target)
+    public void moveTo(Platform target)
     {
+        //Lock platform menu
+        target.ToggleMenuLock();
         animator.SetBool("isAttacking", false);
         animator.SetBool("isFlying", true);
         this.target = target;
