@@ -93,6 +93,8 @@ public class Tower : MonoBehaviour
             Vector2 _shootDirection = (_enemiesInRange[0].transform.position - transform.position).normalized;
             projectile.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(_shootDirection.y, _shootDirection.x) * Mathf.Rad2Deg);;
             projectile.GetComponent<Projectile>().Shoot(data, _shootDirection);
+            AudioClip shootClip = data.shootSound != null ? data.shootSound : SoundManager.Instance?.GetShootSound(data.name);
+            SoundManager.Instance?.PlaySFX(shootClip);
         }
         else
         {
