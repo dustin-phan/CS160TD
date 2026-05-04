@@ -5,10 +5,13 @@ public class Tower : MonoBehaviour
 {
     [SerializeField] private TowerData data;
     [SerializeField] private Animator animator;
+    private bool isHighlighted = false;
     private CircleCollider2D _circleCollider;
-
+    private SpriteRenderer _spriteRenderer;
     private List<Enemy> _enemiesInRange;
     private ObjectPooler _projectilePool;
+    private bool moving = false;
+    private Platform target;
 
     private float _shootTimer;
 
@@ -26,9 +29,29 @@ public class Tower : MonoBehaviour
     {
         _circleCollider = GetComponent<CircleCollider2D>();
         _circleCollider.radius = data.range;
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         _enemiesInRange = new List<Enemy>();
         _projectilePool = GetComponent<ObjectPooler>();
         _shootTimer = data.shootInterval;
+    }
+
+    private void Update()
+    {
+        if (Time.timeScale == 0f) return;
+        if(moving)
+        {
+            if(transform.position != target.transform.position + new Vector3(0f, 0.5f, 0f))
+            {
+                //unlock menu
+                transform.position = Vector3.MoveTowards(transform.position, target.transform.position + new Vector3(0f, 0.5f, 0f), 1 * Time.deltaTime);
+            }
+            else
+            {
+                moving = false;
+                animator.SetBool("isFlying", false);
+                target.ToggleMenuLock();
+            }
+        }
     }
 
     private void OnDrawGizmos()
@@ -80,5 +103,34 @@ public class Tower : MonoBehaviour
     private void HandleEnemyDestroyed(Enemy enemy)
     {
         _enemiesInRange.Remove(enemy);
+    }
+
+    //Toggles the color of the tower. Used when the tower is left-clicked for moving
+    public void ToggleTowerHighlight()
+    {
+        Debug.Log(data.name);
+
+        isHighlighted = !isHighlighted;
+        _spriteRenderer.color = isHighlighted ? Color.red : Color.white;
+    }
+
+    public bool isTowerHighlighted()
+    {
+        return isHighlighted;
+    }
+
+    public void moveTo(Platform target)
+    {
+        //Lock platform menu
+        target.ToggleMenuLock();
+        animator.SetBool("isAttacking", false);
+        animator.SetBool("isFlying", true);
+        this.target = target;
+        moving = true;
+    }
+
+    public TowerData getData()
+    {
+        return data;
     }
 }
