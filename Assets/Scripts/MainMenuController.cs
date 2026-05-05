@@ -8,6 +8,10 @@ public class MainMenuController : MonoBehaviour
     private bool _isSettingsOpen = false;
     public void StartNewGame()
     {
+        var inputManager = FindFirstObjectByType<InputManager>();
+        if (inputManager != null)
+            inputManager.SaveInput();
+
         LevelManager.Instance.LoadLevel(LevelManager.Instance.allLevels[0]);
     }
 

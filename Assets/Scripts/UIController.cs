@@ -48,6 +48,8 @@ public class UIController : MonoBehaviour
     [SerializeField] private GameObject missionCompletePanel;
     private GameObject currentUIPanel;
     private bool _hasShownGameOver;
+    private Canvas _hudCanvas;
+    private GraphicRaycaster _hudRaycaster;
 
     private void Awake()
     {
@@ -59,6 +61,8 @@ public class UIController : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            _hudCanvas = GetComponent<Canvas>();
+            _hudRaycaster = GetComponent<GraphicRaycaster>();
         }
     }
 
@@ -322,20 +326,55 @@ public class UIController : MonoBehaviour
     {
         _hasShownGameOver = false;
 
-        Camera mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        Canvas canvas = GetComponent<Canvas>();
-        canvas.worldCamera = mainCamera;
+        GameObject camGo = GameObject.FindGameObjectWithTag("MainCamera");
+        if (camGo != null && _hudCanvas != null)
+        {
+            Camera mainCamera = camGo.GetComponent<Camera>();
+            if (mainCamera != null)
+                _hudCanvas.worldCamera = mainCamera;
+        }
 
         HidePanels();
 
         if (scene.name == "MainMenu")
         {
+            // In-game HUD is DontDestroyOnLoad; overlays (e.g. tower build panel) were never
+            // hidden by HideUI and can sit above MainMenuCanvas and eat raycasts, making menu
+            // buttons look "broken" or like their UnityEvents lost targets.
+            // Do not disable the HUD Canvas: LeaderBoard and other menu UI live under the same
+            // UICanvas; disabling the canvas hid them. Turning off only GraphicRaycaster stops
+            // this canvas from intercepting clicks while it still renders.
+            CloseTowerUiForMenu();
+            _isGamePaused = false;
+            _isSettingsOpen = false;
+            if (pauseCloseButton != null)
+                pauseCloseButton.SetActive(true);
+
+            if (_hudRaycaster != null)
+                _hudRaycaster.enabled = false;
+
             HideUI();
         }
         else
         {
+            if (_hudRaycaster != null)
+                _hudRaycaster.enabled = true;
+
             ShowUI();
             StartCoroutine(ShowObjective());
+        }
+    }
+
+    private void CloseTowerUiForMenu()
+    {
+        if (towerPanel != null && towerPanel.activeSelf)
+        {
+            towerPanel.SetActive(false);
+            Platform.towerPanelOpen = false;
+            currentUIPanel = null;
+            _currentPlatform = null;
+            if (GameManager.Instance != null)
+                GameManager.Instance.SetTimeScale(1f);
         }
     }
 
@@ -389,9 +428,12 @@ public class UIController : MonoBehaviour
 
     private void HidePanels()
     {
-        pausePanel.SetActive(false);
-        gameOverPanel.SetActive(false);
-        missionCompletePanel.SetActive(false);
+        if (pausePanel != null)
+            pausePanel.SetActive(false);
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(false);
+        if (missionCompletePanel != null)
+            missionCompletePanel.SetActive(false);
     }
 
 }

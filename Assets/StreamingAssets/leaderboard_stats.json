@@ -1,12 +1,12 @@
 {
     "entries": [
-        {"playerName": "TowerMaster", "round": 24},
-        {"playerName": "OrcSlayer99", "round": 21},
-        {"playerName": "PathFinder", "round": 18},
-        {"playerName": "KaijuHunter", "round": 16},
-        {"playerName": "BudgetTD", "round": 14},
-        {"playerName": "SlowAndSteady", "round": 12},
-        {"playerName": "FirstTry", "round": 9},
-        {"playerName": "AFK_Defender", "round": 7}
+        {"playerName": "TowerMaster", "round": 12},
+        {"playerName": "OrcSlayer99", "round": 10},
+        {"playerName": "PathFinder", "round": 9},
+        {"playerName": "KaijuHunter", "round": 8},
+        {"playerName": "BudgetTD", "round": 7},
+        {"playerName": "SlowAndSteady", "round": 6},
+        {"playerName": "FirstTry", "round": 5},
+        {"playerName": "AFK_Defender", "round": 4}
     ]
 }
