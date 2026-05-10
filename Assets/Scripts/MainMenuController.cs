@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using Unity.VisualScripting.ReorderableList.Element_Adder_Menu;
 
 public class MainMenuController : MonoBehaviour
 {
     [SerializeField] private GameObject settingsPanel;
+    [SerializeField] private GameObject HowToPlayPanel;
     private bool _isSettingsOpen = false;
+    private bool _isHowToPlayOpen = false;
     public void StartNewGame()
     {
         var inputManager = FindFirstObjectByType<InputManager>();
@@ -29,6 +32,10 @@ public class MainMenuController : MonoBehaviour
             {
                 ToggleSettingsPanel();
             }
+            else if(_isHowToPlayOpen)
+            {
+                ToggleHowToPlayPanel();
+            }
         }
     }
 
@@ -42,6 +49,21 @@ public class MainMenuController : MonoBehaviour
         {
             settingsPanel.SetActive(true);
             _isSettingsOpen = true;
+            settingsPanel.transform.SetAsLastSibling();
+        }
+    }
+
+    public void ToggleHowToPlayPanel()
+    {
+        if(_isHowToPlayOpen)
+        {
+            HowToPlayPanel.SetActive(false);
+            _isHowToPlayOpen = false;
+        } else
+        {
+            HowToPlayPanel.SetActive(true);
+            _isHowToPlayOpen = true;
+            HowToPlayPanel.transform.SetAsLastSibling();
         }
     }
 
